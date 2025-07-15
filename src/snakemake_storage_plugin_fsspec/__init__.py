@@ -58,12 +58,12 @@ class StorageProviderSettings(StorageProviderSettingsBase):
 # You can however use it to store global information or maintain e.g. a connection
 # pool.
 # Inside of the provider, you can use self.logger (a normal Python logger of type
-# logging.Logger) to log any additional informations or
+# logging.Logger) to log any additional information or
 # warnings.
 class StorageProvider(StorageProviderBase):
     # For compatibility with future changes, you should not overwrite the __init__
     # method. Instead, use __post_init__ to set additional attributes and initialize
-    # futher stuff.
+    # further stuff.
 
     def __post_init__(self):
         # This is optional and can be removed if not needed.
@@ -126,7 +126,7 @@ class StorageProvider(StorageProviderBase):
 class StorageObject(StorageObjectRead, StorageObjectWrite, StorageObjectGlob):
     # For compatibility with future changes, you should not overwrite the __init__
     # method. Instead, use __post_init__ to set additional attributes and initialize
-    # futher stuff.
+    # further stuff.
 
     def __post_init__(self):
         # This is optional and can be removed if not needed.
