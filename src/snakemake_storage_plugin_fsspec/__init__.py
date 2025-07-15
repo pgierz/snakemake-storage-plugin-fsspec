@@ -5,20 +5,13 @@ from typing import Any, Iterable, List, Optional
 # Snakemake and the user as WorkflowError.
 from snakemake_interface_common.exceptions import WorkflowError  # noqa: F401
 from snakemake_interface_storage_plugins.io import IOCacheStorageInterface
-from snakemake_interface_storage_plugins.settings import StorageProviderSettingsBase
+from snakemake_interface_storage_plugins.settings import \
+    StorageProviderSettingsBase
 from snakemake_interface_storage_plugins.storage_object import (
-    StorageObjectGlob,
-    StorageObjectRead,
-    StorageObjectWrite,
-    retry_decorator,
-)
+    StorageObjectGlob, StorageObjectRead, StorageObjectWrite, retry_decorator)
 from snakemake_interface_storage_plugins.storage_provider import (  # noqa: F401
-    ExampleQuery,
-    Operation,
-    QueryType,
-    StorageProviderBase,
-    StorageQueryValidationResult,
-)
+    ExampleQuery, Operation, QueryType, StorageProviderBase,
+    StorageQueryValidationResult)
 
 
 # Optional:
