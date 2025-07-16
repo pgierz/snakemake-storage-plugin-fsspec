@@ -4,7 +4,7 @@ version = "0.1.0"
 description = ""
 readme = "README.md"
 requires-python = ">=3.11,<4.0"
-dependencies = ["snakemake-interface-common (>=1.20.1,<2.0.0)", "snakemake-interface-storage-plugins (>=4.2.1,<5.0.0)"]
+dependencies = ["snakemake-interface-common (>=1.20.1,<2.0.0)", "snakemake-interface-storage-plugins (>=4.2.1,<5.0.0)", "fsspec (>=2025.5.1,<2026.0.0)", "snakemake (>=9.8.0,<10.0.0)", "paramiko (>=3.5.1,<4.0.0)"]
 repository = "https://github.com/your/plugin"
 documentation = "https://snakemake.github.io/snakemake-plugin-catalog/plugins/storage/fsspec.html"
 [[project.authors]]
