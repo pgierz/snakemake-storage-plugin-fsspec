@@ -5,26 +5,18 @@ from typing import Any, Iterable, List, Optional
 
 import fsspec
 from fsspec import AbstractFileSystem
-
 # Raise errors that will not be handled within this plugin but thrown upwards to
 # Snakemake and the user as WorkflowError.
 from snakemake_interface_common.exceptions import WorkflowError  # noqa: F401
 from snakemake_interface_storage_plugins.io import IOCacheStorageInterface
-from snakemake_interface_storage_plugins.settings import StorageProviderSettingsBase
+from snakemake_interface_storage_plugins.settings import \
+    StorageProviderSettingsBase
 from snakemake_interface_storage_plugins.storage_object import (
-    StorageObjectGlob,
-    StorageObjectRead,
-    StorageObjectTouch,
-    StorageObjectWrite,
-    retry_decorator,
-)
+    StorageObjectGlob, StorageObjectRead, StorageObjectTouch,
+    StorageObjectWrite, retry_decorator)
 from snakemake_interface_storage_plugins.storage_provider import (  # noqa: F401
-    ExampleQuery,
-    Operation,
-    QueryType,
-    StorageProviderBase,
-    StorageQueryValidationResult,
-)
+    ExampleQuery, Operation, QueryType, StorageProviderBase,
+    StorageQueryValidationResult)
 
 
 def _parse_protocol_setting(setting):
