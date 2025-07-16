@@ -57,7 +57,7 @@ class SFTPFspecTestStorage(TestStorageFsspecBase):
     __test__ = True
     retrieve_only = True
     delete = False
-    touch = False  # SFTP via FS-Spec does not support touching files
+    touch = False  # SFTP via fsspec does not support touching files
     files_only = True  # Not strictly speaking true, but I want to see if I can get the tests to pass
 
     def get_query(self, tmp_path) -> str:

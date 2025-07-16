@@ -107,16 +107,16 @@ class StorageProvider(StorageProviderBase):
         E.g. for a storage provider like http that would be the host name.
         For s3 it might be just the endpoint URL.
         """
-        ...
+        return super().rate_limiter_key(query, operation)
 
     def default_max_requests_per_second(self) -> float:
         """Return the default maximum number of requests per second for this storage
         provider."""
-        ...
+        return super().default_max_requests_per_second()
 
     def use_rate_limiter(self) -> bool:
         """Return False if no rate limiting is needed for this provider."""
-        ...
+        return super().use_rate_limiter()
 
     @classmethod
     def is_valid_query(cls, query: str) -> StorageQueryValidationResult:
@@ -131,13 +131,13 @@ class StorageProvider(StorageProviderBase):
     # in order to e.g. normalize the query or add information from the settings to it.
     # Otherwise, remove this method as it will be inherited from the base class.
     def postprocess_query(self, query: str) -> str:
-        return query
+        return super().postprocess_query(query)
 
     # This can be used to change how the rendered query is displayed in the logs to
     # prevent accidentally printing sensitive information e.g. tokens in a URL.
     def safe_print(self, query: str) -> str:
         """Process the query to remove potentially sensitive information when printing."""
-        return query
+        return super().safe_print(query)
 
 
 # Required:
