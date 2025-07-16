@@ -1,0 +1,5 @@
+# Storage plugin configuration
+storage:
+  fsspec:
+    protocol: "file" # Default protocol, can be overridden per rule
+    # Additional settings can be added here if needed
